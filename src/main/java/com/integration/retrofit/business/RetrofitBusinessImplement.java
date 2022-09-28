@@ -13,7 +13,6 @@ import com.integration.retrofit.response.LoadHelloWordResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
 public class RetrofitBusinessImplement implements RetrofitBusinessInterface {
 

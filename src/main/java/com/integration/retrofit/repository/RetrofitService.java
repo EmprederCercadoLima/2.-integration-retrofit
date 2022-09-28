@@ -19,7 +19,7 @@ public class RetrofitService {
     private static final String REQUEST_DATE_VALUE = "mock_request_date";
     private static final String REQUEST_APP_CODE_VALUE = "mock_request_app_code";
     
-    private static final String REQUEST_BEARER_TOKEN_COMMERCE = "Bearer REQUEST_BEARER_TOKEN_COMMERCE_";
+    private static final String REQUEST_BEARER_TOKEN_COMMERCE = "Bearer REQUEST_BEARER_TOKEN_COMMERCE";
 	
 	@Autowired
 	private RetrofitInterface retrofitInterface;

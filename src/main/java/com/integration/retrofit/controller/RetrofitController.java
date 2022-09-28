@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.integration.retrofit.business.InitialConfigurationBusinessInterface;
 import com.integration.retrofit.business.RetrofitBusinessInterface;
 import com.integration.retrofit.response.GetExampleParameterByIdResponse;
-import com.integration.retrofit.response.HelloWordResponse;
 import com.integration.retrofit.response.LoadHelloWordResponse;
 
 @RestController
@@ -20,6 +20,9 @@ public class RetrofitController {
 
 	@Autowired
 	private RetrofitBusinessInterface retrofitBusinessInterface;
+	
+	@Autowired
+	private InitialConfigurationBusinessInterface initialConfigurationBusinessInterface;
 	
 	@GetMapping("/channel/http/hello-word")
 	public ResponseEntity<LoadHelloWordResponse> getHelloWord() throws IOException {
@@ -33,4 +36,9 @@ public class RetrofitController {
 		return retrofitBusinessInterface.getExampleParameterById(parameterId);
 	}
 	
+	 @GetMapping("/initial-configuration/hello-word")
+	  public String getHelloWordInitialConfigiuration() throws IOException {
+	    return initialConfigurationBusinessInterface.getHelloWord();
+	 }
+	 
 }
